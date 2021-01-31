@@ -18,6 +18,9 @@ class TitleScreen extends Phaser.Scene
         this.recA = this.add.rectangle(50,50,100,100,0xffffff)
 
         this.leftButton = this.input.keyboard.addKey("A");
+        this.rightButton = this.input.keyboard.addKey("D");
+        this.upButton = this.input.keyboard.addKey("W");
+        this.downButton = this.input.keyboard.addKey("S");
     }
 
     update()
@@ -25,6 +28,21 @@ class TitleScreen extends Phaser.Scene
         if(this.leftButton.isDown)
         {
             this.recA.x -= 10;
+        }
+
+        if(this.rightButton.isDown)
+        {
+            this.recA.x += 10;
+        }
+
+        if(this.downButton.isDown)
+        {
+            this.recA.y += 10;
+        }
+
+        if(this.upButton.isDown)
+        {
+            this.recA.y -= 10;
         }
     }
 
@@ -36,7 +54,7 @@ class TitleScreen extends Phaser.Scene
 
     move()
     {
-        
+
     }
 
 }
