@@ -15,8 +15,8 @@ class TitleScreen extends Phaser.Scene
     {
         console.log("Title Screen")
         this.recA = this.add.rectangle(800,450,50,50,0xffffff)
-        // this.recA.setInteractive()
-        // RecA.on("pointerdown",this.onClick,this)
+        this.recA.setInteractive()
+        this.recA.on("pointerdown",this.onClick,this)
 
     }
 
